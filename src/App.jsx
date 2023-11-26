@@ -17,7 +17,7 @@ function App() {
       <h1><img id='logo-image' src={bookLogo}/>Welcome to Book Buddy</h1>
 
       <nav>
-        <Navigations />
+        {/* <Navigations /> */}
       </nav>
 
       <div>

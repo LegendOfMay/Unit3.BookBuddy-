@@ -14,32 +14,43 @@ useEffect(() => {
             const response = await fetch(`https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api/books`);
             const data = await response.json();
             setAllBooks(data.books)
+            console.log(data.books)
         } catch(error) {
             setError(error.message);
         }
-        // console.log(data.books)
-    }
-    getBooks();
-},[]);
-
+      }
+      getBooks();
+    },[]);
+    
 const handleClick = () => {
     console.log("i have been clicked")
     setShowBooks(true);
 }
-console.log('showBooks:', showBooks);
+
 return (
     <div>
-        
+        <Navigations onLinkClick={handleClick} />
       {showBooks && (
         <>
           <h1>Welcome to BookBuddy Library</h1>
           <h3>Explore, Discover, and Dive into the World of Books</h3>
+          <ul className="book-list">
+            {allBooks.map((book) => {
+              return (
+              <li key={book.id} className="book-card">
+                <img src={book.coverimage} alt={book.title} className="book-cover" />
+                <h4>{book.title}</h4>
+                <p>Author : {book.author}</p>
+                <button>See Details</button>
+              </li>)
+            })}
+          </ul>
           
         </>
       )}
     </div>
-  );
-       
+  );   
+
 
 }
 
