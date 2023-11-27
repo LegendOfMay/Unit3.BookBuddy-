@@ -13,13 +13,23 @@ body {
 h1, h3 {
   text-align: center;
 }
-
+/* NavBar Styling  */
 #nav-bar {
   text-transform: uppercase;
   display: flex;
   justify-content: space-evenly;
 }
 
+.link {
+  color:black;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: darkred; 
+}
+
+/* Library Styling  */
 .book-cover {
   width: 150px;
   height: 150px;
@@ -40,4 +50,44 @@ h1, h3 {
   overflow: hidden;
   width: 200px;
 }
+/* Form Styling  */
+form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+  font-size: large;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.form {
+  display:flex;
+  justify-content: center;
+}
+
 /* Add your own custom styles here */

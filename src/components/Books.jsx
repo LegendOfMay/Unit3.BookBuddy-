@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Navigations from "./Navigations";
 
 const Books = () => {
-console.log('books here')
 const [allBooks, setAllBooks] = useState([])
 const [error, setError] = useState(null);
 const [showBooks,setShowBooks] = useState(false);
@@ -23,9 +22,9 @@ useEffect(() => {
     },[]);
     
 const handleClick = () => {
-    console.log("i have been clicked")
-    setShowBooks(true);
+  setShowBooks(true);
 }
+
 
 return (
     <div>
@@ -45,17 +44,16 @@ return (
               </li>)
             })}
           </ul>
-          
         </>
       )}
     </div>
   );   
-
-
 }
 
 
 
-
-
 export default Books;
+
+
+
+

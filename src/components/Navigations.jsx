@@ -7,10 +7,10 @@ const Navigations = ({ onLinkClick }) => {
 
     return (
         <div id="nav-bar">
-            <Link to={`/Account`}>Account</Link>
-            <Link to={`/Books`} onClick={onLinkClick}>Library</Link>
-            <Link to={`/Login`}>Login</Link>
-            <Link to={`/Register`}>Register</Link>
+            <Link to={`/Account`} className="link">Account</Link>
+            <Link to={`/Books`} className="link" onClick={onLinkClick}>Library</Link>
+            <Link to={`/Login`} className="link">Login</Link>
+            <Link to={`/Register`} className="link">Register</Link>
         </div>
     )
     }
