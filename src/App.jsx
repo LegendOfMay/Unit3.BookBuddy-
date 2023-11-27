@@ -27,6 +27,7 @@ function App() {
         <Route path='/Login' element={<Login />} />
         <Route path='/Register' element={<Register />}/>
         {/* <Route path="/Books/:id" element={<SingleBook />} /> */}
+        <Route path='/' element={<Books />}/>
         
         </Routes>
 
